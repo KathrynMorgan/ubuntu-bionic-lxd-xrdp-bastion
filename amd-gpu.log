@@ -1,0 +1,19 @@
+# ADD PPA
+sudo add-apt-repository -y ppa:oibaf/graphics-drivers \
+
+# Update System
+sudo apt update && \
+sudo apt -y upgrade && \
+sudo apt -y dist-upgrade && \
+sudo apt -y autoremove && \
+sudo apt -y autoclean
+
+# Insstall Packages
+sudo apt install --install-recommends --reinstall -y \
+  xserver-xorg-video-amdgpu \
+  xserver-xorg-video-all \
+  mesa-vdpau-drivers
+
+# Reconfigure Host
+sudo dpkg --configure -a
+sudo dpkg-reconfigure gdm3 ubuntu-session xserver-xorg-video-amdgpu
