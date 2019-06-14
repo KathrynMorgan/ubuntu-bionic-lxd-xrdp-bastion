@@ -1,5 +1,6 @@
-apt update && apt upgrade
+apt update && apt upgrade -y
 apt install -y p7zip-full tasksel
+taskel install ubuntu-desktop
 mkdir Downloads ; cd Downloads
 wget http://www.c-nergy.be/downloads/install-xrdp-3.0.zip
 7z e install-xrdp-3.0.zip 
