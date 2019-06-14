@@ -1,0 +1,2 @@
+ lspci -vnnn | grep -iE "vga|grap|vide|disp" | grep -iE "1002|nvi"
+ lxc config device add cloudctl gpu gpu vendorid=${id_VEN} productid=${id_PROD}
