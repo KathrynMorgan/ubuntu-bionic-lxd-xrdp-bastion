@@ -1,0 +1,8 @@
+apt update && apt upgrade
+apt install -y p7zip-full tasksel
+mkdir Downloads ; cd Downloads
+wget http://www.c-nergy.be/downloads/install-xrdp-3.0.zip
+7z e install-xrdp-3.0.zip 
+chmod +x Install-xrdp-3.0.sh 
+./Install-xrdp-3.0.sh -s yes -g yes
+sudo reboot
